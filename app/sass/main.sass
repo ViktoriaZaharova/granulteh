@@ -1,0 +1,729 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #000
+  opacity: 1
+
+*:-moz-placeholder
+  color: #000
+  opacity: 1
+
+*::-moz-placeholder
+  color: #000
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #000
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #000
+
+body input:required:valid,
+body textarea:required:valid
+  color: #000
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: $default-font
+  font-weight: normal
+  background: #fff
+
+html, body
+  overflow-x: hidden
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+a
+  display: block
+  text-decoration: none
+  transition: .3s ease
+  outline: none
+
+  &:hover, &:focus
+    text-decoration: none
+    
+input, textarea, select
+  outline: none
+  box-shadow: none
+  appearance: none
+  padding: 0
+  box-sizing: border-box
+  font-family: $default-font
+  &:hover, &:focus
+    outline: none
+
+input
+  width: 100%
+  border: none
+    bottom: 2px solid #000000
+  background: transparent
+  padding: 0 0 11px
+  font-size: 14px
+  color: #000
+  &::placeholder
+    color: #000
+
+label
+  display: block
+
+.row
+  margin: 0 -15px
+  @include display-stretch
+
+.col-3
+  width: 33.3%
+  padding: 0 15px
+
+.col-4
+  width: 25%
+  padding: 0 15px
+
+.col-6
+  width: 50%
+  padding: 0 15px
+
+.svg-icon
+  display: inline-block
+  width: 100%
+  height: 100%
+  transition: .3s ease
+
+.container
+  max-width: 1470px
+  width: 100%
+  padding: 0 15px
+  display: flex
+  flex-wrap: wrap
+  margin: 0 auto
+
+.btn
+  text-align: center
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 55px
+  letter-spacing: 0.03em
+  text-transform: uppercase
+  font-size: 14px
+  font-weight: bold
+  position: relative
+
+.btn-accent
+  color: #fff
+  padding: 0 25px
+  &:before
+    content: ''
+    position: absolute
+    transform: skewX(-20deg)
+    width: 100%
+    height: 100%
+    background: linear-gradient(180deg, #2182DB 0%, #08549A 100%)
+    border-radius: 10px
+  span
+    position: relative
+    z-index: 1
+  .svg-icon
+    width: 12px
+    height: 12px
+    margin: 0 16px 0 0
+    fill: #fff
+  &:hover
+    &:before
+      background: #2182DB
+
+button
+  outline: none
+  padding: 0
+  transition: .3s ease
+  cursor: pointer
+  background: transparent
+  border: none
+    radius: 0
+
+.w-100
+  width: 100%
+
+h1
+  text-transform: uppercase
+  margin: 57px 0 17px
+  letter-spacing: 0.02em
+  font-size: 50px
+  font-family: $font
+  color: #fff
+  font-weight: bold
+  line-height: 130%
+
+h2
+  text-align: center
+  width: 100%
+  margin: 0 auto 9px
+  font-size: 38px
+  font-weight: bold
+  letter-spacing: 0.01em
+
+.text-decoration
+  text-decoration: underline
+
+.color-blue
+  color: $blue
+
+.mb-70
+  margin-bottom: 70px
+
+.mb-30
+  margin-bottom: 30px
+
+//header  
+header
+  letter-spacing: 0.01em
+  padding: 32px 0 35px
+  .container
+    @include display-between
+
+.address
+  display: flex
+  align-items: center
+  font-size: 14px
+  letter-spacing: 0.01em
+  span
+    max-width: 225px
+
+.address-icon
+  border-radius: 50%
+  overflow: hidden
+  margin: 0 30px 0 0
+  width: 92px
+  height: 92px
+  filter: drop-shadow(2px 8px 30px rgba(0, 0, 0, 0.1))
+  display: flex
+  align-items: center
+  justify-content: center
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.mail
+  display: flex
+  align-items: center
+  font-size: 14px
+  color: #000
+  letter-spacing: 0.01em
+  .svg-icon
+    width: 17px
+    height: 17px
+    margin: 0 12px 0 0
+    fill: $blue
+  span
+    text-decoration-line: underline
+  &:hover
+    span
+      text-decoration: none
+
+.logo
+  text-align: center
+  text-transform: uppercase
+  letter-spacing: 0.1em
+  font-size: 30px
+  font-family: $font
+  font-weight: bold
+  color: #000
+
+.list-message
+  @include display-center
+  li
+    margin: 0 11px 0 0
+    &:last-child
+      margin: 0
+    a
+      width: 30px
+      height: 30px
+
+.phone
+  color: #000
+  font-size: 22px
+  font-weight: bold
+
+.schedule
+  color: #7C7C7C
+
+//main
+main
+  margin: 0 0 60px
+  position: relative
+  .container
+    border-radius: 20px
+    overflow: hidden
+    padding: 50px 130px 83px
+    max-width: 1700px
+    background: url("../img/bg1.jpg") no-repeat center
+      size: cover
+  .subtitle-text
+    color: #fff
+
+.form-search
+  position: relative
+  max-width: 215px
+  width: 100%
+  label
+    width: 100%
+  button
+    position: absolute
+    right: 0
+    bottom: 9px
+    width: 13px
+    height: 13px
+    background: transparent
+    padding: 0
+    border: none
+    svg
+      fill: #fff
+  input
+    color: #fff
+    border-color: #fff
+    &::placeholder
+      color: #fff
+
+.wrapper
+  @include display-between
+
+.menu
+  font-size: 18px
+  letter-spacing: 0.01em
+  @include display-center
+  li
+    margin: 0 70px 0 0
+    &:last-child
+      margin: 0
+    a
+      color: #fff
+      text-decoration: underline
+      &:hover
+        color: $accent
+        text-decoration: none
+
+.subtitle-text
+  letter-spacing: 0.01em
+  font-size: 18px
+  margin: 0 0 60px
+
+.main-wrapper
+  width: 100%
+  @include display-between
+
+
+.main-box
+  width: 32%
+  background: linear-gradient(270.1deg, #FFFFFF 0.08%, rgba(255, 255, 255, 0.2) 99.92%)
+  border-radius: 20px
+  height: 124px
+  letter-spacing: 0.01em
+  font-size: 14px
+  line-height: 130%
+  margin: 26px 0 0
+  @include display-stretch
+  h3
+    font-weight: bold
+    font-size: 20px
+    margin: 0 0 5px
+  &__content
+    padding: 17px 24px 25px 0
+    width: calc(100% - 155px)
+  &__img
+    height: 100%
+    width: 155px
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    img
+      max-width: 171px
+      position: absolute
+      left: -12px
+      top: 50%
+      transform: translate(0,-50%)
+  &:last-child
+    .main-box__img
+      img
+        max-width: 89px
+        left: -2px
+        transform: none
+        top: -21px
+  &:nth-child(2)
+    .main-box__img
+      img
+        max-width: 175px
+        transform: none
+        top: -41px
+        left: -24px
+
+
+//.advantages
+.advantages-box
+  @include display-column
+  background: #ECECEC
+  border-radius: 20px
+  padding: 46px 30px 27px
+  height: 100%
+  text-align: center
+  h3
+    font-weight: bold
+    margin: 34px auto 17px
+    font-size: 20px
+    letter-spacing: 0.01em
+  &__icon
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    background: #fff
+    width: 117px
+    height: 117px
+    padding: 20px
+  a
+    margin: 5px auto 0
+
+.advantages-box-one
+  .advantages-box__icon
+    padding: 34px
+
+.advantages-box-three
+  .advantages-box__icon
+    padding: 32px
+
+.advantages-box-four
+  .advantages-box__icon
+    padding: 24px
+
+//catalog-section
+.catalog-section
+  .container
+    max-width: 1700px
+  .subtitle-text
+    margin: 0 auto 54px
+    max-width: 432px
+    width: 100%
+    text-align: center
+  .wrapper
+    max-width: 1700px
+    margin: 0 auto
+    border-radius: 20px
+    padding: 97px 130px 67px
+
+
+.bg-grey
+  background: #ECECEC
+
+.catalog-card
+  border-radius: 20px
+  background: #fff
+  height: 100%
+  padding: 23px 30px 30px
+  transition: .3s ease
+  font-size: 14px
+  letter-spacing: 0.01em
+  line-height: 130%
+  h3
+    font-size: 20px
+    font-weight: bold
+    margin: 0 0 7px
+  &:hover
+    box-shadow: -10px 20px 60px rgba(0, 0, 0, 0.15)
+  @include display-stretch
+  &__img
+    width: 170px
+    height: 170px
+    display: flex
+    align-items: center
+    justify-content: center
+    img
+      max-height: 100%
+  &__content
+    width: calc(100% - 170px)
+    padding: 0 0 0 12px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    .btn
+      margin: auto 0 0 5px
+      width: 185px
+      height: 46px
+
+
+//equipment
+.equipment
+  margin: 74px 0 84px
+  h2
+    margin: 0 auto 56px
+    max-width: 761px
+
+.equipment-img
+  max-width: 950px
+  width: 100%
+  overflow: hidden
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 20px
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.equipment-content
+  box-shadow: -10px 20px 60px rgba(0, 0, 0, 0.15)
+  border-radius: 20px
+  background: #fff
+  padding: 80px 93px
+  font-size: 20px
+  letter-spacing: 0.01em
+  line-height: 130%
+  max-width: 950px
+  width: 100%
+  margin: -240px 0 0 auto
+  z-index: 1
+  h3
+    font-weight: bold
+    margin: 20px 0 0
+
+//advantages-company
+.advantages-company
+  margin: 0 0 56px
+
+.advantages-company-box
+  @include display-stretch
+  height: 100%
+  border-radius: 20px
+  overflow: hidden
+  background: linear-gradient(180deg, #2182DB 0%, #08549A 100%)
+  color: #fff
+  letter-spacing: 0.01em
+  line-height: 130%
+  &__img
+    width: 215px
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+  &__content
+    width: calc(100% - 215px)
+    padding: 45px 42px
+    p
+      max-width: 358px
+  h3
+    font-weight: bold
+    font-size: 20px
+    margin: 0 0 12px
+
+//advantages-technology
+.advantages-technology
+  margin: 0 0 40px
+  .subtitle-text
+    max-width: 900px
+    margin: 0 auto 59px
+    text-align: center
+
+.advantages-technology-box
+  overflow: hidden
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 290px
+  border-radius: 20px
+  color: #fff
+  line-height: 130%
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 17.15%, #000000 98.49%)
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.advantages-technology-box__content
+  position: absolute
+  bottom: 0
+  width: 100%
+  left: 0
+  z-index: 1
+  padding: 0 32px 47px 39px
+  letter-spacing: 0.01em
+  font-weight: bold
+
+//.callback
+.callback
+  margin: 0 0 70px
+  .wrapper
+    border: 3px solid #2182DB
+      radius: 20px
+    padding: 53px 50px 60px 70px
+  h2
+    font-size: 38px
+    margin: 0 0 9px
+    text-align: left
+  .subtitle-text
+    letter-spacing: 0.01em
+    font-size: 20px
+    color: $blue
+    font-weight: bold
+    margin: 0
+
+.callback-body
+  max-width: 412px
+  width: 100%
+
+.form
+  display: flex
+  align-items: flex-end
+  label
+    min-width: 215px
+    margin: 0 30px 0 0
+  button
+    height: 65px
+    width: 260px
+
+//contacts
+.contacts
+  position: relative
+  padding: 153px 0 154px
+
+.map
+  width: 100%
+  height: 100%
+  position: absolute
+  left: 0
+  top: 0
+  z-index: 1
+  iframe
+    width: 100%
+    height: 100%
+
+.contacts-box
+  position: relative
+  z-index: 1
+  background: #fff
+  border-radius: 20px
+  box-shadow: -10px 20px 60px rgba(0, 0, 0, 0.15)
+  max-width: 705px
+  width: 100%
+  padding: 49px 53px 51px
+  font-size: 18px
+  .schedule
+    font-size: 14px
+  .phone
+    font-size: 32px
+  .list-message
+    margin: 22px 0 33px
+    li
+      margin: 0 16px 0 0
+
+      a
+        width: 44px
+        height: 44px
+  .address
+    font-size: 18px
+    margin: 0 0 20px
+    span
+      max-width: none
+  .mail
+    font-size: 18px
+    .svg-icon
+      margin: 0 22px 0 0
+
+.address
+  .svg-icon
+    margin: 0 24px 0 0
+    width: 15px
+    height: 21px
+    fill: $blue
+
+.list-social
+  @include display-center
+  margin: 60px 0 0
+  li
+    margin: 0 16px 0 0
+    &:last-child
+      margin: 0
+    a
+      width: 67px
+      height: 67px
+
+//footer
+footer
+  background: #545454
+  padding: 68px 0
+  color: #CDCDCD
+  .logo
+    color: #fff
+    font-size: 30px
+  .container
+    justify-content: space-between
+    align-items: center
+
+.links-developer
+  color: #C6C6C6
+  font-size: 14px
+
+
+@import "media"
+// Всегда в конце
