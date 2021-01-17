@@ -50,6 +50,18 @@
     width: 100%
     justify-content: center
 
+  .card-product__img
+    height: 200px
+
+  .card-product__name
+    font-size: 16px
+    margin: 15px 0 10px
+
+  .catalog-content
+    margin: 0 0 40px
+
+  .price
+    font-size: 22px
 
 @media only screen and (max-width: 1200px)
   .main-box
@@ -95,6 +107,9 @@
   .equipment
     margin: 60px 0
 
+  .card-product
+    padding: 20px 15px
+
 @media only screen and (max-width: 1100px)
   header
     .address
@@ -115,7 +130,15 @@
 
 @media only screen and (max-width: 992px)
   .main-top
-    display: none
+    margin: 0 0 30px
+    .menu
+      display: none
+
+  .form-search
+    max-width: none
+
+  .breadcrumb
+    margin: 10px 0 0
 
   h1
     margin: 0 0 20px
@@ -156,6 +179,16 @@
   .advantages-technology-box__content
     padding: 0 20px 30px
 
+  .seo-box
+    h3
+      font-size: 30px
+    .box-text
+      font-size: 16px
+
+  .catalog-content
+    .col-3
+      width: 50%
+
 @media only screen and (max-width: 900px)
   .main-box__img img, .main-box:nth-child(2) .main-box__img img
     position: relative
@@ -189,6 +222,23 @@
 
   footer
     padding: 30px 0
+
+  .seo-box
+    margin: 0 0 40px
+    h3
+      font-size: 25px
+      margin: 0 0 20px
+
+  .catalog
+    margin: 0 0 50px
+
+  .sidebar
+    padding: 30px 25px
+    border-radius: 15px
+    max-width: 300px
+
+  .catalog-wrapper
+    width: calc(100% - 300px)
 
 @media only screen and (max-width: 768px)
   .main-box
@@ -254,6 +304,30 @@
 
   .copyright
     margin: 10px 0
+
+  .sidebar
+    display: none
+    position: fixed
+    z-index: 3
+    left: 0
+    top: 0
+    background: #fff
+    height: 100%
+    overflow-y: auto
+    border-radius: 0
+    box-shadow: -10px 20px 60px rgba(0, 0, 0, 0.15)
+    .btn-close
+      display: block
+
+  .catalog-wrapper
+    width: 100%
+    padding: 0
+
+  .btn-filter
+    display: flex
+    max-width: 300px
+    width: 100%
+    margin: 0 auto 20px
 
 @media only screen and (max-width: 575px)
   h1
@@ -332,6 +406,18 @@
       padding: 0
       .btn
         margin: 0 auto
+
+  .catalog-content .col-3
+    width: 100%
+
+  .btn-load
+    margin: 0 auto
+
+  .about-product .box-text
+    padding: 20px
+
+  main .container:before
+    border-radius: 10px
 
 @media only screen and (max-width: 440px)
   header
