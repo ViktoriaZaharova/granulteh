@@ -24,18 +24,79 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
   <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="css/main.css">
 
 </head>
 
 <body>
 
+<div class="mobile-menu">
+  <div class="btn-close"></div>
+
+  <a href="index.html" class="logo">granulteh</a>
+
+  <ul class="menu">
+    <li><a href="#">Каталог</a></li>
+    <li><a href="#">Услуги</a></li>
+    <li><a href="#">Цены</a></li>
+    <li><a href="#">Акции</a></li>
+    <li><a href="#">Компания</a></li>
+    <li><a href="#">Статьи</a></li>
+    <li><a href="#">Контакты</a></li>
+    <li><a href="#">Отзывы</a></li>
+  </ul>
+
+  <form method="post" class="form-search">
+    <label><input type="text" placeholder="Поиск" required></label>
+    <button type="submit">
+      <svg class="svg-icon">
+        <use xlink:href="img/sprite.svg#search-icon"></use>
+      </svg>
+    </button>
+  </form>
+
+  <div class="address">
+    <svg class="svg-icon"><use xlink:href="img/sprite.svg#location"></use></svg>
+    <span>Россия, Республика Марий Эл, п.г.т Медведево, ул. Чехова 7 Ж</span>
+  </div>
+
+  <a href="mailto:granultex@gmail.com " class="mail">
+    <svg class="svg-icon">
+      <use xlink:href="img/sprite.svg#mail"></use>
+    </svg>
+    <span>granultex@gmail.com </span>
+  </a>
+
+  <div class="header-box">
+    <a href="tel:88007006081" class="phone">8 (800) 700-60-81</a>
+    <div class="schedule">Пн - Пт: 08:00 - 17:00</div>
+  </div>
+
+  <ul class="list-message">
+    <li><a href="#">
+      <svg class="svg-icon">
+        <use xlink:href="img/sprite.svg#whatsapp"></use>
+      </svg>
+    </a></li>
+    <li><a href="#">
+      <svg class="svg-icon">
+        <use xlink:href="img/sprite.svg#viber"></use>
+      </svg>
+    </a></li>
+    <li><a href="#"><svg class="svg-icon"><use xlink:href="img/sprite.svg#vk"></use></svg></a></li>
+    <li><a href="#"><img src="img/instagram.svg" alt=""></a></li>
+  </ul>
+
+</div>
+
 <header>
   <div class="container">
 
     <div class="address">
       <div class="address-icon"><img src="img/address.png" alt=""></div>
-      <span>Россия, Республика Марий Эл, п.г.т Медведево, ул. Чехова 7 Ж</span></div>
+      <span>Россия, Республика Марий Эл, п.г.т Медведево, ул. Чехова 7 Ж</span>
+    </div>
 
     <a href="mailto:granultex@gmail.com " class="mail">
       <svg class="svg-icon">
@@ -78,7 +139,7 @@
 
 <main class="main">
   <div class="container">
-    <div class="wrapper w-100">
+    <div class="wrapper w-100 main-top">
       <ul class="menu">
         <li><a href="#">Каталог</a></li>
         <li><a href="#">Услуги</a></li>
@@ -484,6 +545,8 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 <script src="js/common.js"></script>
 
 </body>
